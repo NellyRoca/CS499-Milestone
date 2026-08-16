@@ -61,5 +61,15 @@ The accompanying CS-499 ePortfolio materials include:
 - Software Engineering Narrative
 - Algorithms and Data Structures Narrative
 - Database Narrative
+
+## Code Review
+
+The code review video provides a walkthrough of the Elevate application
+and explains the enhancements implemented for the CS-499 capstone,
+including improvements to software engineering and design, algorithms
+and data structures, and database functionality. Due to the upload limitations
+we will have to do it via YouTube:
+
+[[Watch the Elevate Code Review](https://youtu.be/dag8HvZes6Y)
 - Code Review
 - Enhancement source code
