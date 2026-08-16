@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    tools:context=".GoalSmsActivity">
+
+    <TextView
+        android:id="@+id/textGoalSmsTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:text="@string/goal_sms_title"
+        android:textColor="#000000"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/goalInputLayout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="24dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textGoalSmsTitle">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/editGoalWeight"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/goal_weight_hint"
+            android:inputType="numberDecimal" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <TextView
+        android:id="@+id/textGoalHelper"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:text="@string/goal_helper_text"
+        android:textColor="#000000"
+        app:layout_constraintStart_toStartOf="@id/goalInputLayout"
+        app:layout_constraintTop_toBottomOf="@id/goalInputLayout" />
+
+    <Button
+        android:id="@+id/buttonSaveGoal"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="24dp"
+        android:text="@string/save_goal_button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textGoalHelper" />
+
+    <TextView
+        android:id="@+id/textSmsSection"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="70dp"
+        android:text="@string/sms_section_title"
+        android:textColor="#000000"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@id/buttonSaveGoal"
+        app:layout_constraintTop_toBottomOf="@id/buttonSaveGoal" />
+
+    <TextView
+        android:id="@+id/textSmsHelper"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="@string/sms_helper_text"
+        android:textColor="#000000"
+        app:layout_constraintEnd_toEndOf="@id/buttonSaveGoal"
+        app:layout_constraintStart_toStartOf="@id/buttonSaveGoal"
+        app:layout_constraintTop_toBottomOf="@id/textSmsSection" />
+
+    <Button
+        android:id="@+id/buttonEnableSms"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="24dp"
+        android:text="@string/enable_sms_button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textSmsHelper" />
+
+    <TextView
+        android:id="@+id/textPermissionStatus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="@string/permission_status_default"
+        android:textColor="#000000"
+        app:layout_constraintStart_toStartOf="@id/buttonEnableSms"
+        app:layout_constraintTop_toBottomOf="@id/buttonEnableSms" />
+
+    <TextView
+        android:id="@+id/textPermissionMessage"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="@string/sms_denied_message"
+        android:textColor="#000000"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="@id/buttonEnableSms"
+        app:layout_constraintStart_toStartOf="@id/buttonEnableSms"
+        app:layout_constraintTop_toBottomOf="@id/textPermissionStatus" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
